@@ -18,6 +18,7 @@ for(let i = 0; i < boxes.length; i++) {
         let el = checkEl(player1, player2);
 
         if(this.childNodes.length == 0) {
+            
             let cloneEl = el.cloneNode(true);
 
             this.appendChild(cloneEl);
@@ -47,7 +48,7 @@ for(let i = 0; i < buttons.length; i++) {
 
         secondPlayer = this.getAttribute("id");
 
-        for(let j = 0; j < buttons.length; i++) {
+        for(let j = 0; j < buttons.length; j++) {
             buttons[j].computedStyleMap.display = `none`;
         }
 
@@ -239,7 +240,7 @@ function DeclareWinner(winner) {
 
     if(winner == `x`) {
         scoreboardX.textContent = parseInt(scoreboardX.textContent) + 1;
-        msg = "O jogador Venceu!";
+        msg = "O jogador 1 Venceu!";
     } else if(winner == `o`) {
         scoreboardY.textContent = parseInt(scoreboardY.textContent) + 1;
         msg = "O jogador 2 Venceu";
